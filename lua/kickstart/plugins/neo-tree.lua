@@ -13,9 +13,14 @@ return {
   keys = {
     { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
     { '<leader>e', ':Neotree toggle<CR>', desc = 'Toggle [E]xplorer', silent = true },
+    { '<S-n>', ':Neotree focus<CR>', desc = 'Focus Neo-tree', silent = true },
   },
   opts = {
     filesystem = {
+      follow_current_file = {
+        enabled = true,
+        leave_dirs_open = false, -- `false` closes auto expanded dirs
+      },
       window = {
         mappings = {
           ['\\'] = 'close_window',
